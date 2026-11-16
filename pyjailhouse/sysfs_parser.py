@@ -73,6 +73,8 @@ def check_input_listed(name, optional=False):
             set = set.union(inputs['files_intel'])
         elif cpuvendor == 'AuthenticAMD':
             set = set.union(inputs['files_amd'])
+        elif cpuvendor == 'CentaurHauls':
+            set = set.union(inputs['files_intel'])
 
     for file in set:
         if fnmatch.fnmatch(name, file):
