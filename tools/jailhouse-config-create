@@ -266,6 +266,8 @@ if vendor == 'GenuineIntel':
                                                            dmar_regions)
 elif vendor == 'CentaurHauls':
     (iommu_units, extra_memregs) = sysfs_parser.parse_dmar(pci_devices, ioapics, dmar_regions)
+elif vendor == 'HygonGenuine':
+    (iommu_units, extra_memregs) = sysfs_parser.parse_ivrs(pci_devices, ioapics)
 else:
     (iommu_units, extra_memregs) = sysfs_parser.parse_ivrs(pci_devices, ioapics)
 mem_regions += extra_memregs
